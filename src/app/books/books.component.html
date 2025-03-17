@@ -1,13 +1,13 @@
 <div>
   <h2>Programming book list!</h2>
 
-  <button (click)="toggleBooks()" [disabled]="bookButtonDisabled">Toggle books visibility</button>
+  <button (click)="isShowing = !isShowing" [disabled]="bookButtonDisabled">Toggle books visibility</button>
 
   <div *ngIf="isShowing">
     <ul>
       <ng-template ngFor let-item [ngForOf]="books" let-i="index">
           <li>
-            <img [src]="books[i].img_path" [alt]="books[i].name" width="200px"><br>
+            <img [src]="books[i].img_path" [alt]="books[i].name" width="100px"><br>
             {{ books[i].name }} <br>
             by {{ books[i].author}}
           </li>
