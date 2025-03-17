@@ -3,7 +3,7 @@
 
   <button (click)="handleClick()" [disabled]="bookButtonDisabled">Show books</button>
   <br>
-  <input type="text" (input)="handleInput($event)">
+  <input type="text" [(ngModel)]="textOnHtml">
   <p>Inserted text: {{ textOnHtml }}</p>
   <ul>
     <ng-template ngFor let-item [ngForOf]="books" let-i="index">

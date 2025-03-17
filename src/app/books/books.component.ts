@@ -12,6 +12,7 @@ export class BooksComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  textOnHtml: string = '';
   bookButtonDisabled = false;
   books = [
     {
@@ -35,9 +36,4 @@ export class BooksComponent implements OnInit {
     console.log("Botão clicado");
   }
 
-  textOnHtml: string = '';
-  handleInput(event: any){
-    // console.log(event.target.value);
-    this.textOnHtml = event.target.value;
-  }
 }
