@@ -13,7 +13,10 @@ export class BooksComponent implements OnInit {
   }
 
   textOnHtml: string = '';
+
   bookButtonDisabled = false;
+  isShowing = false;
+
   books = [
     {
       name: 'Entendendo Algoritmos: Um Guia Ilustrado Para Programadores e Outros Curiosos',
@@ -32,8 +35,8 @@ export class BooksComponent implements OnInit {
     }
   ];
 
-  handleClick(){
-    console.log("Botão clicado");
+  toggleBooks(){
+    this.isShowing = !this.isShowing;
   }
 
 }
