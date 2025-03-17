@@ -1,0 +1,17 @@
+<div>
+  <h2>Programming book list!</h2>
+
+  <button (click)="handleClick()" [disabled]="bookButtonDisabled">Show books</button>
+  <br>
+  <input type="text" (input)="handleInput($event)">
+  <p>Inserted text: {{ textOnHtml }}</p>
+  <ul>
+    <ng-template ngFor let-item [ngForOf]="books" let-i="index">
+        <li>
+          <img [src]="books[i].img_path" [alt]="books[i].name" width="200px"><br>
+          {{ books[i].name }} <br>
+          by {{ books[i].author}}
+        </li>
+    </ng-template>
+  </ul>
+</div>
