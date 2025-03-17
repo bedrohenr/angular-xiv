@@ -2,9 +2,6 @@
   <h2>Programming book list!</h2>
 
   <button (click)="toggleBooks()" [disabled]="bookButtonDisabled">Show books</button>
-  <br>
-  <input type="text" [(ngModel)]="textOnHtml">
-  <p>Inserted text: {{ textOnHtml }}</p>
 
   <div *ngIf="isShowing">
     <ul>
