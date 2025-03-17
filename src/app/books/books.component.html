@@ -1,7 +1,10 @@
 <div>
   <h2>Programming book list!</h2>
 
-  <button (click)="isShowing = !isShowing" [disabled]="bookButtonDisabled">Toggle books visibility</button>
+  <button (click)="isShowing = !isShowing" [disabled]="bookButtonDisabled">
+    <ng-container *ngIf="!isShowing">Show Books</ng-container>
+    <ng-container *ngIf="isShowing">Hide Books</ng-container>
+  </button>
 
   <div *ngIf="isShowing">
     <ul>
