@@ -9,11 +9,14 @@
   <div *ngIf="isShowing">
     <ul>
       <ng-template ngFor let-item [ngForOf]="books" let-i="index">
-          <li>
+          <li class="book">
             <img [src]="books[i].img_path" [alt]="books[i].name" width="125px">
-            {{ books[i].name | titlecase }} <br>
-            by {{ books[i].author | uppercase}}<br>
-            {{ books[i].price | currency: 'R$ '}}
+
+            <p>
+              {{ books[i].name | titlecase }}<br>
+              by {{ books[i].author | uppercase}}<br>
+              {{ books[i].price | currency: 'R$ '}}
+            </p>
           </li>
       </ng-template>
     </ul>

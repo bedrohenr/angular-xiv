@@ -22,7 +22,7 @@ export class BooksComponent implements OnInit {
   textOnHtml: string = '';
 
   bookButtonDisabled = false;
-  isShowing = false;
+  isShowing = true;
 
 
   books: Book[] = [
