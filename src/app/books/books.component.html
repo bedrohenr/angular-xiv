@@ -8,17 +8,19 @@
 
   <div *ngIf="isShowing">
     <ul>
-      <ng-template ngFor let-item [ngForOf]="books" let-i="index">
-          <li class="book">
-            <img [src]="books[i].img_path" [alt]="books[i].name" width="125px">
 
-            <p>
-              {{ books[i].name | titlecase }}<br>
-              by {{ books[i].author | uppercase}}<br>
-              {{ books[i].price | currency: 'R$ '}}
-            </p>
-          </li>
-      </ng-template>
+        <li *ngFor="let book of books; let i=index"class="book">
+
+          <img [src]="book.img_path" [alt]="book.name" width="125px">
+
+          <p>
+            {{ book.name | titlecase }}<br>
+            by {{ book.author | uppercase}}<br>
+            {{ book.price | currency: 'R$ '}}
+          </p>
+
+        </li>
+
     </ul>
   </div>
 </div>
