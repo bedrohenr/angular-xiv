@@ -1,5 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 
+@inter
+interface Book {
+  name: string;
+  author: string;
+  img_path: string;
+}
+
 @Component({
   selector: 'app-books',
   templateUrl: './books.component.html',
@@ -17,7 +24,8 @@ export class BooksComponent implements OnInit {
   bookButtonDisabled = false;
   isShowing = false;
 
-  books = [
+
+  books: Book[] = [
     {
       name: 'Entendendo Algoritmos: Um Guia Ilustrado Para Programadores e Outros Curiosos',
       author: 'Aditya Y. Bhargava',
