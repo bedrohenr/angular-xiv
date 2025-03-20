@@ -6,7 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BooksComponent } from './books/books.component';
 import { BookComponent } from './book/book.component';
-import { BooksModule } from './modules/books.module';
+import { BooksModule } from './modules/books/books.module';
 
 @NgModule({
   declarations: [
