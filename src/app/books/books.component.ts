@@ -21,13 +21,13 @@ export class BooksComponent implements OnInit {
 
   books: Book[] = [
     {
-      name: 'entendendo algoritmos: um guia ilustrado para programadores e outros curiosos',
+      name: 'entendendo algoritmos',
       author: 'aditya y. bhargava',
       img_path: 'https://m.media-amazon.com/images/I/71Vkg7GfPFL._SY425_.jpg',
       price: 200
     },
     {
-      name: 'código limpo: habilidades práticas do agile software',
+      name: 'código limpo',
       author: 'robert c. martin',
       img_path: 'https://m.media-amazon.com/images/I/71dH97FwGbL._SY385_.jpg',
       price: 350
