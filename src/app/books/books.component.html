@@ -9,7 +9,7 @@
   <div *ngIf="isShowing">
     <ul>
       <ng-container *ngFor="let singleBook of books; let i=index">
-        <app-book [book]="singleBook"></app-book>
+        <app-book [book]="singleBook" (bookEmitter)="addToCart($event)"></app-book>
       </ng-container>
     </ul>
   </div>

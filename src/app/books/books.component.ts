@@ -40,4 +40,8 @@ export class BooksComponent implements OnInit {
     }
   ];
 
+  addToCart(event: Book){
+    console.log(event);
+  }
+
 }
