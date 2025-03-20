@@ -8,5 +8,6 @@
     {{ book.price | currency: 'R$ '}}
   </p>
 
-  <button (click)="sendToCart()">Add to Cart</button>
+  <button *ngIf="!isInCart" (click)="sendToCart()">Add to Cart</button>
+  <button *ngIf="isInCart" (click)="removeFromCart()">Remove from Cart</button>
 </li>

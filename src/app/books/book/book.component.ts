@@ -9,13 +9,21 @@ import { Book } from '../../types/Book';
 })
 export class BookComponent implements OnInit {
   @Input() book: Book = {} as Book;
+  isInCart: boolean = false;
 
-  constructor( private CartService: CartService ) { }
+  constructor( private cartService: CartService ) { }
 
   ngOnInit(): void {
   }
 
+
   sendToCart(){
-    this.CartService.add(this.book);
+    this.isInCart = true;
+    this.cartService.add(this.book);
+  }
+
+  removeFromCart(){
+    this.isInCart = false;
+    this.cartService.remove(this.book);
   }
 }
