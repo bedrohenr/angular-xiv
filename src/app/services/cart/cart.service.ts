@@ -12,4 +12,8 @@ export class CartService {
   add(book: Book){
     this.cart.push(book)
   }
+
+  get(){
+    return this.cart;
+  }
 }
